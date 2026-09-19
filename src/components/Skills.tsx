@@ -17,7 +17,7 @@ const item = {
 
 export function Skills() {
   return (
-    <section id="skills" className="mx-auto w-full max-w-5xl px-6 py-20 sm:py-24">
+    <section id="skills" className="mx-auto w-full max-w-5xl px-6 py-20 sm:py-24 border border-dashed rounded-lg">
       <SectionHeading
         index="02"
         title="Skills"
@@ -43,7 +43,7 @@ export function Skills() {
                 
                   <Badge
                   variant="outline"
-                  className="px-4 py-2 text-sm font-medium shadow-sm transition-shadow duration-300 hover:border-foreground/40 hover:shadow-[0_0_0_4px_var(--accent),0_8px_24px_-12px_var(--foreground)]">
+                  className="px-4 py-4 text-sm font-medium rounded-lg shadow-sm transition-shadow duration-300 hover:border-foreground/40 hover:shadow-[0_0_0_4px_var(--accent),0_8px_24px_-12px_var(--foreground)]">
                   
                     {skill.name}
                   </Badge>

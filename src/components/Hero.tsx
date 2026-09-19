@@ -17,10 +17,10 @@ const item = {
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden border-b border-border">
+    <section id="top" className="relative overflow-hidden border-b border-dashed border-border">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
+        className="pointer-events-none absolute inset-0 opacity-[0.50] [background-image:linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
       
       <motion.div
         variants={container}
@@ -66,15 +66,17 @@ export function Hero() {
             <ArrowDown className="h-4 w-4" aria-hidden="true" />
           </ButtonLink>
           <ButtonLink
-            href={`${import.meta.env.BASE_URL}rayya-yuma-cv.docx`}
-            download="Rayya-Yuma-CV.docx"
+            className = "border border-dashed"
+            href={`${import.meta.env.BASE_URL}rayya-yuma-cv.pdf`}
+            download="Rayya-Yuma-CV.pdf"
             size="lg"
             variant="outline">
-            <Download className="h-4 w-4" aria-hidden="true" />
+            <Download className="h-4 w-4 " aria-hidden="true" />
             Download CV
           </ButtonLink>
           <div className="ml-1 flex items-center gap-1">
             <ButtonLink
+              className ="border border-gray-100/10"
               href="https://github.com/Yuma-backend-dev"
               target="_blank"
               rel="noreferrer noopener"
@@ -85,6 +87,7 @@ export function Hero() {
               <Github className="h-4 w-4" aria-hidden="true" />
             </ButtonLink>
             <ButtonLink
+             className ="border border-gray-100/10"
               href="https://linkedin.com/in/jack-yuma"
               target="_blank"
               rel="noreferrer noopener"

@@ -16,6 +16,7 @@ export interface Project {
   role: string;
   description: string;
   stack: string[];
+  liveUrl?: string;
 }
 
 export interface ContactLink {

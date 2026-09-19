@@ -27,7 +27,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className={`sticky top-0 z-50 w-full border-b transition-colors duration-300 ${
+      className={`sticky top-0 z-50 w-full border-b border-dashed transition-colors duration-300 ${
       scrolled ?
       'border-border bg-background/80 backdrop-blur-md' :
       'border-transparent bg-transparent'}`
@@ -36,14 +36,14 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-6">
         <a
           href="#top"
-          className="font-mono text-sm font-medium tracking-tight transition-opacity hover:opacity-70">
-          
-          rayya<span className="text-muted-foreground">.dev</span>
+          className="font-mono text-sm font-medium tracking-tight hover:underline duration-300 transition-opacity hover:opacity-90">
+           
+          RyanYuma<span className="text-muted-foreground ">.dev</span>
         </a>
 
-        <nav aria-label="Section navigation" className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Section navigation" className="hidden items-center gap-1 md:flex border border-dashed rounded-lg">
           {sections.map((section) =>
-          <ButtonLink key={section.id} href={`#${section.id}`} variant="ghost" size="sm">
+          <ButtonLink key={section.id} href={`#${section.id}`} variant="ghost" size="lg">
               {section.label}
             </ButtonLink>
           )}
@@ -56,9 +56,10 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                variant="ghost"
+                variant="outline"
                 size="icon"
                 onClick={onToggleTheme}
+                
                 aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>
                 
                 {theme === 'dark' ?

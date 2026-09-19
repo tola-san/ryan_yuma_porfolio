@@ -36,7 +36,7 @@ export const education: EducationItem[] = [
   degree: 'Management Information Systems (MIS)',
   school: 'SET Education Center',
   url: 'https://www.setecu.com',
-  period: '2025 — 2026',
+  period: '2024 — 2026',
   description:
   'Graduated with a focus on information systems, databases, and software development fundamentals.'
 },
@@ -49,7 +49,8 @@ export const projects: Project[] = [
   role: 'Backend Developer',
   description:
   "Built the product and inventory REST APIs that power the platform's core catalog using Java & Spring Boot.",
-  stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Maven']
+  stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Maven'],
+  liveUrl: 'https://fluxibiz.store/store'
 },
 {
   name: 'Scholarship Web',
