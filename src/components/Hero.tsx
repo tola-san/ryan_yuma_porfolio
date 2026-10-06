@@ -88,7 +88,7 @@ export function Hero() {
             </ButtonLink>
             <ButtonLink
              className ="border border-gray-100/10"
-              href="https://linkedin.com/in/jack-yuma"
+              href="https://www.linkedin.com/in/jack-yuma-65a2b3425"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="LinkedIn profile"
