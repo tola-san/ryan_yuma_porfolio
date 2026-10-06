@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { ButtonLink } from './ButtonLink';
 import { Badge } from './ui/Badge';
@@ -16,6 +16,8 @@ const item = {
 };
 
 export function Hero() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <section id="top" className="relative overflow-hidden border-b border-dashed border-border">
       <div
@@ -24,7 +26,7 @@ export function Hero() {
       
       <motion.div
         variants={container}
-        initial="hidden"
+        initial={reduceMotion ? false : 'hidden'}
         animate="show"
         className="relative mx-auto w-full max-w-5xl px-6 py-24 sm:py-32">
         

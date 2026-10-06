@@ -19,16 +19,21 @@ export function Projects() {
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) =>
         <motion.article
+          className="group"
           key={project.name}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: index * 0.1 }}
-          whileHover={{ y: -6 }}>
+          whileHover={{
+            y: -6,
+            scale: 1.01,
+            transition: { type: 'spring', duration: 0.3, bounce: 0 }
+          }}>
           
             <Card className="flex h-full flex-col shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-foreground/5">
               <CardHeader>
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-muted">
+                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-muted transition-[transform,background-color] duration-150 group-hover:rotate-3 group-hover:scale-105 group-hover:bg-accent">
                   <FolderGit2 className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                 </div>
                 <CardTitle className="font-heading text-lg tracking-tight">{project.name}</CardTitle>

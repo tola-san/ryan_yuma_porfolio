@@ -98,3 +98,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes orbit {
+  from {
+    transform: rotate(calc(var(--orbit-angle) * 1deg))
+      translateY(calc(var(--orbit-radius) * 1px))
+      rotate(calc(var(--orbit-angle) * -1deg));
+  }
+  to {
+    transform: rotate(calc(var(--orbit-angle) * 1deg + 360deg))
+      translateY(calc(var(--orbit-radius) * 1px))
+      rotate(calc((var(--orbit-angle) * -1deg) - 360deg));
+  }
+}
+
+.orbiting-circle {
+  animation: orbit calc(var(--orbit-duration) * 1s) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbiting-circle {
+    animation-play-state: paused;
+  }
+}

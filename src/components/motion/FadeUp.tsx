@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 interface FadeUpProps {
   children: React.ReactNode;
@@ -10,11 +10,12 @@ interface FadeUpProps {
 
 export function FadeUp({ children, delay = 0, className, as = 'div' }: FadeUpProps) {
   const MotionTag = motion[as];
+  const reduceMotion = useReducedMotion();
 
   return (
     <MotionTag
       className={className}
-      initial={{ opacity: 0, y: 24 }}
+      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay }}>
