@@ -86,7 +86,7 @@ export const contactLinks: ContactLink[] = [
 {
   label: 'LinkedIn',
   value: 'linkedin.com/in/jack-yuma',
-  href: 'https://linkedin.com/in/jack-yuma',
+  href: 'https://www.linkedin.com/in/jack-yuma-65a2b3425',
   icon: 'linkedin',
   external: true
 }];
